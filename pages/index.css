@@ -125,6 +125,30 @@ aside h2, li{
     transform: translate(50%);
 }
 
+#form{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.form{
+    margin: 16px;
+    padding: 32px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 8px 0px rgba(34, 60, 80, 0.2);
+    background-color: rgb(65, 90, 119, 0.5);
+}
+
+.form input, textarea{
+    margin: 1rem;
+    padding: 1rem;
+    display: block;
+    border: none;
+    border-radius: 10px;
+    text-align: inherit;
+}
+
+
+
 footer{
     display: flex;
     flex-direction: column;
