@@ -125,9 +125,14 @@ aside h2, li{
     transform: translate(50%);
 }
 
+.main ul{
+    padding: 16px;
+}
+
 #form{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .form{
@@ -145,14 +150,21 @@ aside h2, li{
     border: none;
     border-radius: 10px;
     text-align: inherit;
+    width: 90%;
 }
 
+#button{
+    text-align: center;
+}
+
+#button:hover{
+    background-color:cornflowerblue;
+}
 
 
 footer{
     display: flex;
     flex-direction: column;
-    position: relative;
     padding: 1rem;
     align-items: center;
     width: 100%;
