@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body img:first-child{
+    width: 100%;
+    background-size: cover;
+}
+
+header{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    column-gap: 0.5rem;
+    font-weight: bold;
+    background-color: rgb(224, 225, 221, 0.8);
+    padding: 1rem;
+}
+
+#title{
+    width: 100%;
+    padding: 2rem;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    background-color: rgb(0, 0, 0, 0.8);
+}
+
+
+header a, nav a{
+    text-decoration: none;
+    color: black;
+}
+
+header a:hover{
+    color: black;
+}
+
+nav a:hover{
+    color: blue;
+}
+
+
+header div:nth-child(2){
+    display: flex;
+    flex-direction: column;
+}
+
+header div:nth-child(2) div:nth-child(2){
+    display: none;
+    position: absolute;
+    top: 3rem;
+    padding: 1rem;
+    box-shadow: 10px 10px 8px 0px rgba(34, 60, 80, 0.2);
+    background-color: rgb(224, 225, 221, 0.8);
+    row-gap: 1rem;
+    z-index: 1;
+}
+
+header div:nth-child(2):hover div:nth-child(2){display: flex;}
+
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 1000px) {main{flex-direction: column;}}
+
+nav, .main, aside{
+    margin: 16px;
+    padding: 8px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 8px 0px rgba(34, 60, 80, 0.2);
+}
+
+nav{
+    flex: 1;
+    background-color: rgb(65, 90, 119, 0.5);
+}
+
+nav ul{
+    margin: 1rem;
+}
+
+
+.main{
+    flex: 2;
+    background-color: rgb(65, 90, 119, 0.5);
+}
+
+main h1, h2{
+    text-align: center;
+}
+
+main h1, h2, p{
+    margin-top: 5px;
+}
+
+aside{
+    flex: 1;
+    background-color: rgb(65, 90, 119, 0.5);
+}
+
+aside h2, nav h2{
+    text-align: center;
+}
+
+aside ul{
+    margin: 1rem;
+}
+
+aside h2, li{
+    margin-bottom: 10px;
+}
+
+.main img{
+    border-radius: 20px;
+    width: 50%;
+    transform: translate(50%);
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 1rem;
+    align-items: center;
+    width: 100%;
+    background-color: rgb(224, 225, 221);
+}
