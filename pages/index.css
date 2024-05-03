@@ -1,3 +1,6 @@
+    /*Общие свойства всех страниц*/
+
+/*Исключение браузерной таблицы стилей*/
 *{
     margin: 0;
     padding: 0;
@@ -5,12 +8,132 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/*Фоновый цвет всех страниц*/
+body{
+    background-color: rgb(61, 90, 128, 0.4);
+}
+
+/*Общий хидер для всех страниц*/
+header{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    column-gap: 0.5rem;
+    font-weight: bold;
+    background-color: rgb(41, 50, 65, 0.3);
+    padding: 1rem;
+}
+
+/*Отключение декорации текста и автоматического цвета*/
+header a, nav a{
+    text-decoration: none;
+    color: black;
+}
+
+/*Цвет ссылок хидера при наведении*/
+header a:hover{
+    color: gold;
+}
+
+/*Цвет ссылок нав. меню при наведении*/
+nav a:hover{
+    color: blue;
+}
+
+/*Выпадающее меню списка статей*/
+header div:nth-child(2){
+    display: flex;
+    flex-direction: column;
+}
+
+/*Выпадающее меню статей*/
+header div:nth-child(2) div:nth-child(2){
+    display: none;
+    position: absolute;
+    padding: 8px;
+    box-shadow: 10px 10px 8px 0px rgba(34, 60, 80, 0.2);
+    background-color: rgb(41, 50, 65, 0.3);
+    z-index: 1;
+}
+
+/*Отступ между ссылками*/
+header div:nth-child(2) div:nth-child(2) a{
+    margin: 8px;
+}
+
+/*Включени блока статей при наведении*/
+header div:nth-child(2):hover div:nth-child(2){display: flex;}
+
+    /*Основной контент*/
+main{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/*Медиа-запрос для адаптации*/
+@media (max-width: 1000px) {main{flex-direction: column;}}
+
+/*Внутренние настройки блоков*/
+nav, .main, aside{
+    margin: 16px;
+    padding: 8px;
+    border-radius: 10px;
+    background-color: rgb(152, 193, 217, 0.5);
+    box-shadow: 10px 10px 8px 0px rgba(34, 60, 80, 0.2);
+}
+
+/*Нав. меню*/
+nav{
+    flex: 1;
+}
+
+/*Отступ вокруг списка*/
+nav ul, aside ul{
+    margin: 1rem;
+}
+
+/*Центральная часть основного контента*/
+.main{
+    flex: 4;
+}
+
+/*Заголовков*/
+h1, h2{
+    text-align: center;
+}
+
+/*Верхний отступ для элементов текста*/
+main h1, h2, p, aside h2, li{
+    margin-top: 5px;
+}
+
+/*Настройки изображения в основной части*/
+.main img{
+    border-radius: 20px;
+    width: 50%;
+    transform: translate(50%);
+}
+
+/*Оступы между элментами списка в основной части*/
+.main ul{
+    padding: 16px;
+}
+
+
+    /*Сайд-бар*/
+aside{
+    flex: 1;
+}
+    /*Главная страница*/
+
+/*Настройки изображения*/
 body img:first-child{
     width: 100%;
     background-size: cover;
 }
 
-header{
+/*Особенность хидера основной страницы*/
+#main_header{
     position: absolute;
     top: 0;
     width: 100%;
@@ -18,123 +141,39 @@ header{
     justify-content: center;
     column-gap: 0.5rem;
     font-weight: bold;
-    background-color: rgb(224, 225, 221, 0.8);
+    background-color: rgb(41, 50, 65, 0.3);
     padding: 1rem;
 }
 
+/*Заголовок страницы*/
 #title{
     width: 100%;
     padding: 2rem;
     font-weight: bold;
     color: white;
     text-align: center;
-    background-color: rgb(0, 0, 0, 0.8);
+    background-color: rgb(0, 0, 0, 0.9);
 }
 
+    /*Контакты*/
 
-header a, nav a{
-    text-decoration: none;
-    color: black;
+/*Фоновое изображение контактов*/
+.background_сontacts{
+    background-image: url(../images/background_contacts.jpg);
+    background-size: cover;
 }
 
-header a:hover{
-    color: black;
-}
-
-nav a:hover{
-    color: blue;
-}
-
-
-header div:nth-child(2){
-    display: flex;
-    flex-direction: column;
-}
-
-header div:nth-child(2) div:nth-child(2){
-    display: none;
-    position: absolute;
-    top: 3rem;
-    padding: 1rem;
-    box-shadow: 10px 10px 8px 0px rgba(34, 60, 80, 0.2);
-    background-color: rgb(224, 225, 221, 0.8);
-    row-gap: 1rem;
-    z-index: 1;
-}
-
-header div:nth-child(2):hover div:nth-child(2){display: flex;}
-
-
-main{
-    display: flex;
-    flex-wrap: wrap;
-}
-
-@media (max-width: 1000px) {main{flex-direction: column;}}
-
-nav, .main, aside{
-    margin: 16px;
-    padding: 8px;
-    border-radius: 10px;
-    box-shadow: 10px 10px 8px 0px rgba(34, 60, 80, 0.2);
-}
-
-nav{
-    flex: 1;
-    background-color: rgb(65, 90, 119, 0.5);
-}
-
-nav ul{
-    margin: 1rem;
-}
-
-
-.main{
-    flex: 2;
-    background-color: rgb(65, 90, 119, 0.5);
-}
-
-main h1, h2{
-    text-align: center;
-}
-
-main h1, h2, p{
-    margin-top: 5px;
-}
-
-aside{
-    flex: 1;
-    background-color: rgb(65, 90, 119, 0.5);
-}
-
-aside h2, nav h2{
-    text-align: center;
-}
-
-aside ul{
-    margin: 1rem;
-}
-
-aside h2, li{
-    margin-bottom: 10px;
-}
-
-.main img{
-    border-radius: 20px;
-    width: 50%;
-    transform: translate(50%);
-}
-
-.main ul{
-    padding: 16px;
-}
-
+/*Блок с формами и текстом*/
 #form{
+    height: 100vh;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
 }
 
+
+/*Формы*/
 .form{
     margin: 16px;
     padding: 32px;
@@ -143,6 +182,7 @@ aside h2, li{
     background-color: rgb(65, 90, 119, 0.5);
 }
 
+/*Внутренние настройки форм*/
 .form input, textarea{
     margin: 1rem;
     padding: 1rem;
@@ -153,20 +193,30 @@ aside h2, li{
     width: 90%;
 }
 
+/*Отключение изменений размер*/
+textarea{
+    resize: none;
+}
+
+/*Настройки кнопки*/
 #button{
     text-align: center;
 }
 
+/*Кнопка при наведении*/
 #button:hover{
     background-color:cornflowerblue;
 }
 
-
+    /*Подвал сайта*/
 footer{
     display: flex;
     flex-direction: column;
     padding: 1rem;
     align-items: center;
     width: 100%;
-    background-color: rgb(224, 225, 221);
+    background-color: rgb(41, 50, 65, 0.3);
+
 }
+
+
