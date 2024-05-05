@@ -38,7 +38,8 @@ header a:hover{
 
 /*Цвет ссылок нав. меню при наведении*/
 nav a:hover{
-    color: blue;
+    color: gold;
+    font-weight: bold;
 }
 
 /*Выпадающее меню списка статей*/
@@ -129,11 +130,9 @@ aside{
     /*Главная страница*/
 
 /*Настройки изображения*/
-.main_picture{
-    background-image: url(../images/main_picture.jpg);
+body img:first-child{
     background-size: cover;
-    width: auto;
-    height: 80vh;
+    width: 100%;
 }
 
 /*Особенность хидера основной страницы*/
