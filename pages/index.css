@@ -24,6 +24,7 @@ header{
     padding: 1rem;
 }
 
+
 /*Отключение декорации текста и автоматического цвета*/
 header a, nav a{
     text-decoration: none;
@@ -49,6 +50,7 @@ header div:nth-child(2){
 /*Выпадающее меню статей*/
 header div:nth-child(2) div:nth-child(2){
     display: none;
+    top: 2rem;
     position: absolute;
     padding: 8px;
     box-shadow: 10px 10px 8px 0px rgba(34, 60, 80, 0.2);
@@ -127,22 +129,17 @@ aside{
     /*Главная страница*/
 
 /*Настройки изображения*/
-body img:first-child{
-    width: 100%;
+.main_picture{
+    background-image: url(../images/main_picture.jpg);
     background-size: cover;
+    width: auto;
+    height: 80vh;
 }
 
 /*Особенность хидера основной страницы*/
 #main_header{
     position: absolute;
     top: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    column-gap: 0.5rem;
-    font-weight: bold;
-    background-color: rgb(41, 50, 65, 0.3);
-    padding: 1rem;
 }
 
 /*Заголовок страницы*/
