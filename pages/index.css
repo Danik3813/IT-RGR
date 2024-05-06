@@ -6,6 +6,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
 }
 
 /*Фоновый цвет всех страниц*/
@@ -20,8 +21,8 @@ header{
     justify-content: center;
     column-gap: 0.5rem;
     font-weight: bold;
-    background-color: rgb(41, 50, 65, 0.3);
     padding: 1rem;
+    background-color: rgb(41, 50, 65, 0.3);
 }
 
 
@@ -74,7 +75,7 @@ main{
 }
 
 /*Медиа-запрос для адаптации*/
-@media (max-width: 1000px) {main{flex-direction: column;}}
+@media (max-width: 1000px) {main{flex-direction: column;} font-size: large;}
 
 /*Внутренние настройки блоков*/
 nav, .main, aside{
@@ -131,9 +132,10 @@ aside{
 
 /*Настройки изображения*/
 body img:first-child{
-    background-size: cover;
+    display: block;
     width: 100%;
 }
+
 
 /*Особенность хидера основной страницы*/
 #main_header{
@@ -210,9 +212,7 @@ footer{
     flex-direction: column;
     padding: 1rem;
     align-items: center;
-    width: 100%;
     background-color: rgb(41, 50, 65, 0.3);
-
 }
 
 
