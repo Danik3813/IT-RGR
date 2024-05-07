@@ -75,7 +75,7 @@ main{
 }
 
 /*Медиа-запрос для адаптации*/
-@media (max-width: 1000px) {main{flex-direction: column;} font-size: large;}
+@media (max-width: 1000px) {main{flex-direction: column;}}
 
 /*Внутренние настройки блоков*/
 nav, .main, aside{
