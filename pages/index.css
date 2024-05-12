@@ -32,7 +32,14 @@ header{
 /*Отключение декорации текста и автоматического цвета*/
 header a, nav a{
     text-decoration: none;
+}
+
+nav a{
     color: black;
+}
+
+header a{
+    color: #fdf4dc;
 }
 
 /*Цвет ссылок хидера при наведении*/
@@ -68,6 +75,7 @@ nav a:hover{
 
 .menu_name{
     border: none;
+    color: #fdf4dc;
     background-color: rgb(41, 50, 65, 0);
     font-weight: bold;
     height: 100%
@@ -81,6 +89,7 @@ main{
 
 /*Медиа-запрос для адаптации*/
 @media (max-width: 1000px) {main{flex-direction: column;} }
+@media (max-width: 1000px) {div.main_picture{height: 25vh;} }
 
 /*Внутренние настройки блоков*/
 nav, .main, aside{
@@ -143,6 +152,13 @@ aside{
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.body img:first-child{
+    display: none;
+}
+
+
+
 
 
 
