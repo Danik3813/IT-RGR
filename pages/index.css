@@ -14,14 +14,17 @@ body{
     background-color: rgb(61, 90, 128, 0.4);
 }
 
+
+
 /*Общий хидер для всех страниц*/
 header{
     width: 100%;
     display: flex;
+    padding: 1rem;
     justify-content: center;
+    align-items: center;
     column-gap: 0.5rem;
     font-weight: bold;
-    padding: 1rem;
     background-color: rgb(41, 50, 65, 0.3);
 }
 
@@ -43,30 +46,32 @@ nav a:hover{
     font-weight: bold;
 }
 
+
 /*Выпадающее меню списка статей*/
-header div:nth-child(2){
+.menu_content{
+    display: none;
+    position: absolute;
+    z-index: 1;
+    background-color: rgb(41, 50, 65, 0.3);
+}
+
+/* Настройки ссылок */
+.menu_container a{
+    padding: 1rem;
+    text-decoration: none;
+}
+/* Выпадение списка при наведение */
+.menu_container:hover .menu_content{
     display: flex;
     flex-direction: column;
 }
 
-/*Выпадающее меню статей*/
-header div:nth-child(2) div:nth-child(2){
-    display: none;
-    top: 2rem;
-    position: absolute;
-    padding: 8px;
-    box-shadow: 10px 10px 8px 0px rgba(34, 60, 80, 0.2);
-    background-color: rgb(41, 50, 65, 0.3);
-    z-index: 1;
+.menu_name{
+    border: none;
+    background-color: rgb(41, 50, 65, 0);
+    font-weight: bold;
+    height: 100%
 }
-
-/*Отступ между ссылками*/
-header div:nth-child(2) div:nth-child(2) a{
-    margin: 8px;
-}
-
-/*Включени блока статей при наведении*/
-header div:nth-child(2):hover div:nth-child(2){display: flex;}
 
     /*Основной контент*/
 main{
@@ -75,7 +80,7 @@ main{
 }
 
 /*Медиа-запрос для адаптации*/
-@media (max-width: 1000px) {main{flex-direction: column;}}
+@media (max-width: 1000px) {main{flex-direction: column;} }
 
 /*Внутренние настройки блоков*/
 nav, .main, aside{
@@ -131,10 +136,15 @@ aside{
     /*Главная страница*/
 
 /*Настройки изображения*/
-body img:first-child{
-    display: block;
+.main_picture{
+    background: url(../images/main_picture.jpg);
+    height: 80vh;
     width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
+
+
 
 
 /*Особенность хидера основной страницы*/
