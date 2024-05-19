@@ -1,20 +1,15 @@
 /*Общие свойства всех страниц*/
-
 /*Исключение браузерной таблицы стилей*/
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: arial;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
 }
-
 /*Фоновый цвет всех страниц*/
 body{
-    background-color: rgb(204, 204, 204, 0.5);
+    background-color: rgb(204, 204, 204, 0.3);
 }
-
-
-
 /*Общий хидер для всех страниц*/
 header{
     width: 100%;
@@ -25,57 +20,45 @@ header{
     font-weight: bold;
     background-color: rgb(41, 50, 65, 0.5);
 }
-
 p, ul, header{
     font-size: 20px;
 }
-
-
 /*Отключение декорации текста и автоматического цвета*/
 header a, nav a{
     text-decoration: none;
 }
-
 nav a{
     color: black;
 }
-
 header a{
     color: #fdf4dc;
 }
-
 header div{
     padding: 1rem;
 }
-
 h1, h2{
     color: blue;
 }
-
-
 /*Цвет ссылок хидера при наведении*/
 header a:hover{
     color: gold;
 }
-
 /*Цвет ссылок нав. меню при наведении*/
 nav a:hover{
     color: royalblue;
+    box-shadow: 4px 4px 8px -4px rgba(34, 60, 80, 0.2);
 }
-
-
 /*Выпадающее меню списка статей*/
 .menu_content{
     display: none;
     position: absolute;
-    top: 55px;
+    top: 56px;
     z-index: 1;
     background-color: rgb(41, 50, 65, 0.5);
 }
-
 /* Настройки ссылок */
 .menu_container a{
-    padding: 0.5rem;
+    padding: 8px;
     text-decoration: none;
 }
 /* Выпадение списка при наведение */
@@ -83,7 +66,6 @@ nav a:hover{
     display: flex;
     flex-direction: column;
 }
-
 .menu_name{
     border: none;
     color: #fdf4dc;
@@ -92,15 +74,13 @@ nav a:hover{
     font-weight: bold;
     height: 100%
 }
-
-    /*Основной контент*/
+/*Основной контент*/
 main{
     display: flex;
     flex-wrap: wrap;
 }
-
 /*Медиа-запрос для адаптации*/
-@media (max-width: 1024px){
+@media (max-width: 900px){
     main{
         flex-direction: column;
     }
@@ -117,7 +97,6 @@ main{
         display: none;
     }
 }
-
 /*Внутренние настройки блоков*/
 nav, .main, aside{
     margin: 16px;
@@ -127,55 +106,43 @@ nav, .main, aside{
     box-shadow: 10px 10px 8px 0px rgba(34, 60, 80, 0.2);
     border: 1px royalblue solid;
 }
-
-nav:hover{
-
-}
-
 /*Нав. меню*/
 nav{
     flex: 1;
 }
-
 /*Отступ вокруг списка*/
 nav ul, aside ul{
     margin: 1rem;
 }
-
 /*Центральная часть основного контента*/
 .main{
     flex: 4;
 }
-
 /*Заголовков*/
 h1, h2{
     text-align: center;
 }
-
 /*Верхний отступ для элементов текста*/
 main h1, h2, p, aside h2, li{
     margin-top: 5px;
 }
-
 /*Настройки изображения в основной части*/
-.main img{
+main img{
     border-radius: 20px;
     width: 50%;
     transform: translate(50%);
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
-
 /*Оступы между элментами списка в основной части*/
 .main ul{
     padding: 16px;
 }
-
-
-    /*Сайд-бар*/
+/*Сайд-бар*/
 aside{
     flex: 1;
 }
-    /*Главная страница*/
-
+/*Главная страница*/
 /*Настройки изображения*/
 .main_picture{
     background: url(../images/main_picture.jpg);
@@ -186,8 +153,6 @@ aside{
     display: flex;
     align-items: center;
 }
-
-
 .title{
     text-align: center;
     padding: 1rem;
@@ -195,30 +160,23 @@ aside{
     background-color: rgb(41, 50, 65, 0.5);
     width: 100%;
 }
-
 .title p{
     font-size: small;
 }
-
 .body img:first-child{
     display: none;
 }
-
-
 /*Особенность хидера основной страницы*/
 #main_header{
     position: absolute;
     top: 0;
 }
-
-    /*Контакты*/
-
+/*Контакты*/
 /*Фоновое изображение контактов*/
 .background_сontacts{
     background-image: url(../images/background_contacts.jpg);
     background-size: cover;
 }
-
 /*Блок с формами и текстом*/
 #form{
     height: 100vh;
@@ -227,8 +185,6 @@ aside{
     justify-content: center;
     align-items: center;
 }
-
-
 /*Формы*/
 .form{
     margin: 16px;
@@ -237,7 +193,6 @@ aside{
     box-shadow: 10px 10px 8px 0px rgba(34, 60, 80, 0.2);
     background-color: rgb(65, 90, 119, 0.5);
 }
-
 /*Внутренние настройки форм*/
 .form input, textarea{
     margin: 1rem;
@@ -248,23 +203,33 @@ aside{
     text-align: inherit;
     width: 90%;
 }
-
 /*Отключение изменений размер*/
 textarea{
     resize: none;
 }
-
 /*Настройки кнопки*/
 #button{
     text-align: center;
 }
-
 /*Кнопка при наведении*/
 #button:hover{
     background-color:royalblue;
 }
-
-    /*Подвал сайта*/
+/* Об авторе */
+.links{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.links a{
+    height: auto;
+    width: 50%;
+}
+.links img{
+    border-radius: 100%;
+}
+/*Подвал сайта*/
 footer{
     display: flex;
     flex-direction: column;
@@ -273,17 +238,3 @@ footer{
     background-color: rgb(41, 50, 65, 0.5);
 }
 
-
-.links{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-
-.links a{
-    height: auto;
-    width: 25%;
-}
-.links img{
-    border-radius: 100%;
-}
