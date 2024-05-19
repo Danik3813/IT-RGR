@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Выпадающий список</title>
+        <meta charset="utf-8">
+        <style>
+            .menu_name{
+                padding: 0.5rem;
+                background-color: wheat;
+            }
+            .menu_content{
+                display: none;
+                position: absolute;
+                z-index: 1;
+                background-color: wheat;
+            }
+            .menu_container a{
+                color: white;
+                text-decoration: none;
+                padding: 0.5rem;
+            }
+            .menu_container:hover .menu_content{
+                display: flex;
+                flex-direction: column;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="menu_container">
+            <a href="#" class="menu_name">Статьи</a>
+            <div class="menu_content">
+                <a href="#">Фукусима</a>
+                <a href="#">Чернобыль</a>
+                <a href="#">Три-Майл Айленд</a>
+            </div>
+        </div>  
+    </body>
+</html>

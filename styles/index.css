@@ -5,12 +5,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: arial;
 }
 
 /*Фоновый цвет всех страниц*/
 body{
-    background-color: rgb(61, 90, 128, 0.4);
+    background-color: rgb(204, 204, 204, 0.5);
 }
 
 
@@ -19,12 +19,15 @@ body{
 header{
     width: 100%;
     display: flex;
-    padding: 1rem;
     justify-content: center;
     align-items: center;
     column-gap: 0.5rem;
     font-weight: bold;
-    background-color: rgb(41, 50, 65, 0.3);
+    background-color: rgb(41, 50, 65, 0.5);
+}
+
+p, ul, header{
+    font-size: 20px;
 }
 
 
@@ -41,6 +44,15 @@ header a{
     color: #fdf4dc;
 }
 
+header div{
+    padding: 1rem;
+}
+
+h1, h2{
+    color: blue;
+}
+
+
 /*Цвет ссылок хидера при наведении*/
 header a:hover{
     color: gold;
@@ -48,8 +60,7 @@ header a:hover{
 
 /*Цвет ссылок нав. меню при наведении*/
 nav a:hover{
-    color: gold;
-    font-weight: bold;
+    color: royalblue;
 }
 
 
@@ -57,13 +68,14 @@ nav a:hover{
 .menu_content{
     display: none;
     position: absolute;
+    top: 55px;
     z-index: 1;
-    background-color: rgb(41, 50, 65, 0.3);
+    background-color: rgb(41, 50, 65, 0.5);
 }
 
 /* Настройки ссылок */
 .menu_container a{
-    padding: 1rem;
+    padding: 0.5rem;
     text-decoration: none;
 }
 /* Выпадение списка при наведение */
@@ -75,7 +87,7 @@ nav a:hover{
 .menu_name{
     border: none;
     color: #fdf4dc;
-    font-size: medium;
+    font-size: 20px;
     background-color: rgb(41, 50, 65, 0);
     font-weight: bold;
     height: 100%
@@ -88,16 +100,36 @@ main{
 }
 
 /*Медиа-запрос для адаптации*/
-@media (max-width: 1100px) {main{flex-direction: column;} }
-@media (max-width: 1100px) {div.main_picture{height: 25vh;} *{font-size: medium;}}
+@media (max-width: 1024px){
+    main{
+        flex-direction: column;
+    }
+    div.main_picture{
+        height: 25vh;
+    }
+    h1, h2, ul, p, a, button.menu_name{
+        font-size: medium;
+    }
+    div.main_picture{
+        align-items: flex-end;
+    }
+    div.main_picture p{
+        display: none;
+    }
+}
 
 /*Внутренние настройки блоков*/
 nav, .main, aside{
     margin: 16px;
     padding: 8px;
     border-radius: 10px;
-    background-color: rgb(152, 193, 217, 0.5);
+    background-color: white;
     box-shadow: 10px 10px 8px 0px rgba(34, 60, 80, 0.2);
+    border: 1px royalblue solid;
+}
+
+nav:hover{
+
 }
 
 /*Нав. меню*/
@@ -155,16 +187,17 @@ aside{
     align-items: center;
 }
 
+
 .title{
     text-align: center;
     padding: 1rem;
     color: white;
-    background-color: rgb(41, 50, 65, 0.3);
+    background-color: rgb(41, 50, 65, 0.5);
     width: 100%;
 }
 
 .title p{
-    font-size: medium;
+    font-size: small;
 }
 
 .body img:first-child{
@@ -228,7 +261,7 @@ textarea{
 
 /*Кнопка при наведении*/
 #button:hover{
-    background-color:gold;
+    background-color:royalblue;
 }
 
     /*Подвал сайта*/
@@ -237,5 +270,20 @@ footer{
     flex-direction: column;
     padding: 1rem;
     align-items: center;
-    background-color: rgb(41, 50, 65, 0.3);
+    background-color: rgb(41, 50, 65, 0.5);
+}
+
+
+.links{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.links a{
+    height: auto;
+    width: 25%;
+}
+.links img{
+    border-radius: 100%;
 }
